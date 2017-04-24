@@ -1,0 +1,14 @@
+{
+    "other": [],
+    "ships": [
+        {
+            "name": "ship1"
+        },
+        {
+            "name": "ship2"
+        },
+        {
+            "name": "ship3"
+        }
+    ]
+}
