@@ -1,0 +1,8 @@
+{
+    "Ships": [
+        {            "name": "foo"        },
+        {            "name": "bar"        },
+        {            "name": "blah"        },
+        {            "name": "diblah"        }
+    ]
+}

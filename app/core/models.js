@@ -1,18 +1,9 @@
-var Ship = (function () {
-    function Ship() {
-    }
-    return Ship;
-}());
-var CardImage = (function () {
-    function CardImage() {
-    }
-    return CardImage;
-}());
-var Upgrade = (function () {
-    function Upgrade() {
-    }
-    return Upgrade;
-}());
+class Ship {
+}
+class CardImage {
+}
+class Upgrade {
+}
 var SlotType;
 (function (SlotType) {
     SlotType[SlotType["Missile"] = 0] = "Missile";
@@ -21,9 +12,6 @@ var SlotType;
     SlotType[SlotType["System"] = 3] = "System";
     SlotType[SlotType["Cannon"] = 4] = "Cannon";
 })(SlotType || (SlotType = {}));
-var Build = (function () {
-    function Build() {
-    }
-    return Build;
-}());
+class Build {
+}
 //# sourceMappingURL=models.js.map

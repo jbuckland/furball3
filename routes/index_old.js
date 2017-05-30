@@ -14,12 +14,19 @@ router.get('/test', function (req, res, next) {
 
 
 router.get('/ship', function (req, res, next) {
-  var jsonData = fs.readFile('../database.json');
+  
+  var jsonData = fs.readFileSync('./app/data/database.json');
   var database = JSON.parse(jsonData);
 
-  var ships = dataBase.ships;
+  var ships = database.Ships;
 
-  res.json(JSON.stringify(ships));
+  res.json(ships);
+})
+
+router.get('/ship/add', function (req, res, next) {
+
+
+
 })
 
 

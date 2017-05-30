@@ -5,20 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}\\bin\\www"
+            "name": "Launch Program2",
+            "program": "${workspaceRoot}/bin/www",
+            "cwd": "${workspaceRoot}",
+            "protocol": "auto",
+            "port": 5858
         },
+ {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/bin/www",
+            "cwd": "${workspaceRoot}"
+        },
+
+
         {
-            "name": "Attach to Port",
             "type": "node",
             "request": "attach",
-            "address": "localhost",
-            "port": 3000
+            "name": "Attach to Process",
+            "port": 5858
         },
         {
-            "name": "Launch via NPM",
+            "name": "NPM",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceRoot}",
