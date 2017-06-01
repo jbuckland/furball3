@@ -1,8 +1,24 @@
 {
     "Ships": [
-        {            "name": "foo"        },
-        {            "name": "bar"        },
-        {            "name": "blah"        },
-        {            "name": "diblah"        }
+        {
+            "Type": "X-Wing",
+            "PilotName": "Poe Dameron",
+            "PointCost": 33,
+            "PilotAbility": "When attacking or defending, if you have a focus token, you may change of your [eye] results to a [hit] or [evade] result.",
+            "UpgradeSlots": [
+                4,
+                0
+            ]
+        },
+        {
+            "Type": "X-Wing",
+            "PilotName": "Foo",
+            "PointCost": 33,
+            "PilotAbility": "test",
+            "UpgradeSlots": [
+                4,
+                0
+            ]
+        }
     ]
 }

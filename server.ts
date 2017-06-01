@@ -6,7 +6,7 @@ import * as path from "path";
 import * as logger from "morgan";
 import * as cookieParser from "cookie-parser";
 
-import { ShipRoutes } from "./routes/ship";
+import { ShipRoutes } from "./routes/shipRoutes";
 
 export class Server {
 
@@ -103,8 +103,9 @@ export class Server {
 
 
     private routes() {
-        var shipRouter = ShipRoutes.createRouter();
-        this.app.use('/ship', shipRouter);
+ 
+        var shipRouter = new ShipRoutes();
+        this.app.use('/ship', shipRouter.createRouter());
 
     }
 }

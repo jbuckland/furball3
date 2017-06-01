@@ -1,19 +1,19 @@
-class Ship{
-    public Type:string;
-    public PilotName:string;
+export class Ship {
+    public Type: string;
+    public PilotName: string;
     public PilotAbility: string;
     public PointCost: number;
     public CardImageId: number;
-    public UpgradeSlots:SlotType[];
+    public UpgradeSlots: SlotType[];
 }
 
-class CardImage{
+export class CardImage {
     public Id: number;
     public FilePath: string;
 }
 
 
-class Upgrade{
+export class Upgrade {
     public Name: string;
     public PointCost: number;
     public UpgradeType: SlotType;
@@ -21,18 +21,18 @@ class Upgrade{
     public CardImageId: number;
 }
 
-enum SlotType{
-    Missile,
-    Torpedo,
-    Astromech,
-    System,
-    Cannon
+export enum SlotType {
+    Missile = 1,
+    Torpedo = 2,
+    Astromech = 3,
+    System = 4,
+    Cannon = 5
 }
 
 
-class Build{
-    public ChosenShip:Ship;
-    public Upgrades:Upgrade[];
+export class Build {
+    public ChosenShip: Ship;
+    public Upgrades: Upgrade[];
     public Description: string;
 }
 

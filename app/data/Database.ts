@@ -1,4 +1,6 @@
-class Database {
+import { Ship } from "../core/models";
+
+export class Database {
 
     constructor() {
 
