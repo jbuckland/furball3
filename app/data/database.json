@@ -1,6 +1,7 @@
 {
     "Ships": [
         {
+            "Id": 1,
             "Type": "X-Wing",
             "PilotName": "Poe Dameron",
             "PointCost": 33,
@@ -11,6 +12,7 @@
             ]
         },
         {
+            "Id": 2,
             "Type": "X-Wing",
             "PilotName": "Foo",
             "PointCost": 33,
@@ -19,6 +21,37 @@
                 4,
                 0
             ]
+        },
+        {
+            "Type": "Y-Wing",
+            "PilotName": "Foo",
+            "PointCost": 33,
+            "PilotAbility": "test",
+            "UpgradeSlots": [
+                5,
+                1
+            ],
+            "Id": 3
         }
-    ]
+    ],
+    "Upgrades": [
+        {
+            "Id": 1,
+            "Name": "R2-D2",
+            "PointCost": 3,
+            "UpgradeType": "3",
+            "Description": "test",
+            "CardImageId": -1
+        },
+        {
+            "Name": "Push the Limit",
+            "PointCost": 2,
+            "UpgradeType": "6",
+            "Description": "test test",
+            "CardImageId": -1,
+            "Id": 6
+        }
+    ],
+    "MaxUpgradeId": 8,
+    "MaxShipId": 3
 }

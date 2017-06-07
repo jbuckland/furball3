@@ -23,10 +23,10 @@ export class ShipService implements IShipService {
         return ship;
     }
 
-    public AddShip(type: string, name: string, cost: number, ability: string, upgradeList: SlotType[]): Ship {
+    public AddShip(type: string, pilotName: string, cost: number, ability: string, upgradeList: SlotType[]): Ship {
         var ship = new Ship();
         ship.Type = type;
-        ship.PilotName = name;
+        ship.PilotName = pilotName;
         ship.PointCost = cost;
         ship.PilotAbility = ability;
         //ship.UpgradeSlots = upgradeList;

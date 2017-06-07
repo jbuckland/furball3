@@ -1,4 +1,8 @@
-export class Ship {
+export class Record {
+    Id: number;
+}
+export class Ship extends Record {
+    //public Id: number;
     public Type: string;
     public PilotName: string;
     public PilotAbility: string;
@@ -13,7 +17,8 @@ export class CardImage {
 }
 
 
-export class Upgrade {
+export class Upgrade extends Record {
+    //public Id: number;
     public Name: string;
     public PointCost: number;
     public UpgradeType: SlotType;
@@ -26,7 +31,8 @@ export enum SlotType {
     Torpedo = 2,
     Astromech = 3,
     System = 4,
-    Cannon = 5
+    Cannon = 5,
+    ElitePilot = 6
 }
 
 

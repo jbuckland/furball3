@@ -28,7 +28,7 @@ export class ShipRoutes {
         router = Router();
 
 
-        router.get("/", (req: Request, res: Response, next: NextFunction) => {
+        router.get("/all", (req: Request, res: Response, next: NextFunction) => {
             var shipId = req.param('shipId');
             var response = this.shipService.GetShips();
             res.json(response);
@@ -36,10 +36,13 @@ export class ShipRoutes {
 
 
         router.get("/add", (req: Request, res: Response, next: NextFunction) => {
+            var cost = Number(req.param('cost'));
+            if(isNaN(cost))
+                cost = -1;
             var response = this.shipService.AddShip(
                 req.param('type'),
-                req.param('name'),
-                req.param('cost'),
+                req.param('pilotName'),
+                cost,
                 req.param('ability'),
                 req.param('upgradeList')
             )
