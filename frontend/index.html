@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <script src="./jquery-3.0.0.min.js"></script>
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+
+    <style>
+        .template {
+            display: none;
+        }
+
+        .listRow {
+            width: 760px;
+            overflow: hidden;
+            margin-bottom: 3px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid grey;
+        }
+
+        .pilotContainer{
+
+        }
+
+        .pilotCardContainer {
+            width: 200px;
+            display: inline-block;
+            float: left;
+            padding-right: 5px;
+        }
+
+        .pilotCard {
+            width: 200px;
+            height: 279px;
+        }
+
+        .upgradeContainer {
+        }
+
+        .upgradeCard {
+            display: inline-block;
+            width: 129px;
+            height: 200px;
+            padding-right: 5px;
+            float:left;
+        }
+
+        .text {
+            text-align: center;
+            border: 1px solid black;
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div id='template_list_row' class="template">
+    <div class='listRow'></div>
+</div>
+<div id='template_pilot' class="template">
+    <div class="pilotContainer">
+        <div class='pilotCardContainer'></div>
+        <div class='upgradeContainer'></div>
+    </div>
+</div>
+
+
+<script>
+    main();
+
+
+</script>
+
+</body>
+
+</html>
