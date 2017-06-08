@@ -1,8 +1,44 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.template {
+display: none;
 }
 
-a {
-  color: #00B7FF;
+.listRow {
+width: 760px;
+overflow: hidden;
+margin-bottom: 3px;
+padding-bottom: 3px;
+border-bottom: 1px solid grey;
+}
+
+.pilotContainer{
+
+}
+
+.pilotCardContainer {
+width: 200px;
+display: inline-block;
+float: left;
+padding-right: 5px;
+}
+
+.pilotCard {
+width: 200px;
+height: 279px;
+}
+
+.upgradeContainer {
+}
+
+.upgradeCard {
+display: inline-block;
+width: 129px;
+height: 200px;
+padding-right: 5px;
+float:left;
+}
+
+.text {
+text-align: center;
+border: 1px solid black;
+vertical-align: top;
 }

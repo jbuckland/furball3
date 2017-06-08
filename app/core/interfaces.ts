@@ -20,3 +20,4 @@ export interface IUpgradeService {
     AddUpgrade(name: string, cost: number, type: Core.SlotType, description: string, imageId: number): Core.Upgrade;
     DeleteUpgrade(upgradeId: number): boolean;
 }
+

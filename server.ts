@@ -6,6 +6,7 @@ import * as path from "path";
 import * as logger from "morgan";
 import * as cookieParser from "cookie-parser";
 
+import { IndexRoutes } from "./routes/indexRoutes";
 import { ShipRoutes } from "./routes/shipRoutes";
 import { UpgradeRoutes } from "./routes/upgradeRoutes";
 
@@ -66,10 +67,11 @@ export class Server {
     public config() {
         //add static paths
         this.app.use(express.static(path.join(__dirname, "public")));
+        this.app.use(express.static(path.join(__dirname, "frontend")));
 
         //configure pug
         this.app.set("views", path.join(__dirname, "views"));
-        this.app.set("view engine", "jade");
+        this.app.set("view engine", "pug");
 
         //use logger middlware
         this.app.use(logger("dev"));
@@ -107,11 +109,14 @@ export class Server {
 
     private routes() {
 
+        var indexRouter = new IndexRoutes();
+        this.app.use('/', indexRouter.createRouter());
+
         var shipRouter = new ShipRoutes();
-        this.app.use('/ship', shipRouter.createRouter());
+        this.app.use('/api/ship', shipRouter.createRouter());
 
         var upgradeRouter = new UpgradeRoutes();
-        this.app.use('/upgrade', upgradeRouter.createRouter());
+        this.app.use('/api/upgrade', upgradeRouter.createRouter());
 
 
     }

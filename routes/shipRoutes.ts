@@ -1,13 +1,14 @@
 import { NextFunction, Request, Response, Router } from "express";
 import { ShipService } from "../app/services/shipService";
 import { DataAccess } from "../app/data/dataAccess";
+import {IRoutes} from './IRoutes';
 
 /**
  * / route
  *
  * @class User
  */
-export class ShipRoutes {
+export class ShipRoutes implements IRoutes {
     //what's my job?
     //to tie request paths to service methods
 
@@ -21,8 +22,7 @@ export class ShipRoutes {
     }
 
     public createRouter(): Router {
-        //log
-        console.log("[ShipRoute::create] Creating ship route.");
+        console.log("Creating ShipRoutes.");
 
         let router: Router;
         router = Router();

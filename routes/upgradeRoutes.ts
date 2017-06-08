@@ -18,8 +18,7 @@ export class UpgradeRoutes {
     }
 
     public createRouter(): Router {
-        //log
-        console.log("[UpgradeRoutes::createRouter] Creating upgrade route.");
+        console.log("Creating UpgradeRoutes.");
 
         let router: Router;
         router = Router();
