@@ -9,6 +9,7 @@ import * as cookieParser from "cookie-parser";
 import { IndexRoutes } from "./routes/indexRoutes";
 import { ShipRoutes } from "./routes/shipRoutes";
 import { UpgradeRoutes } from "./routes/upgradeRoutes";
+import { BuildRoutes } from "./routes/buildRoutes";
 
 
 
@@ -119,6 +120,9 @@ export class Server {
 
         var upgradeRouter = new UpgradeRoutes();
         this.app.use('/api/upgrade', upgradeRouter.createRouter());
+
+        var buildRouter = new BuildRoutes();
+        this.app.use('/api/build', buildRouter.createRouter());
 
 
     }

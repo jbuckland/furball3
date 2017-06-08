@@ -7,6 +7,7 @@ export interface IMainView {
 
 export interface IMainData {
     getBuilds(): Array<Build>;
+    getBuilds_ViaApi(): JQueryXHR;
 }
 
 export class MainPresenter {
@@ -19,11 +20,16 @@ export class MainPresenter {
     }
 
     public DisplayAllBuilds() {
-        let builds = this.data.getBuilds();
+        //let builds = this.data.getBuilds();
+        let buildsPromise = this.data.getBuilds_ViaApi();
+        buildsPromise.then((builds: Array<Build>, textStatus: string) => {
+            for (let build of builds) {
+                this.view.addBuild(build);
+            }
+        });
 
-        for (let build of builds) {
-            this.view.addBuild(build);
-        }
+
+
     }
 
 

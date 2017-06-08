@@ -36,10 +36,12 @@ class MainView implements IMainView {
         pilotTemplate.find(".pilotCardContainer").append(pilot);
 
 
-
-        for (let upgrade of build.Upgrades) {
-            this.addUpgrade(pilotTemplate, upgrade.Name);
+        if (build.Upgrades != null) {
+            for (let upgrade of build.Upgrades) {
+                this.addUpgrade(pilotTemplate, upgrade.Name);
+            }
         }
+
 
         listRowTemplate.append(pilotTemplate);
         $("body").append(listRowTemplate);

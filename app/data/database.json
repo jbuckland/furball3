@@ -52,6 +52,502 @@
             "Id": 6
         }
     ],
+    "Builds": [
+        [
+            {
+                "ChosenShip": {
+                    "PilotName": "soontirfel",
+                    "Type": "tieinterceptor",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "autothrusters"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "stealthdevice"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "royalguardtie"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "echo",
+                    "Type": "tiephantom",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "veteraninstincts"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "advancedcloakingdevice"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "countessryad",
+                    "Type": "tiedefender",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "tiex7"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "deathfire",
+                    "Type": "tiebomber",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 13,
+                        "Name": "extramunitions"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "plasmatorpedoes"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "assaultmissiles"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "clustermissiles"
+                    },
+                    {
+                        "UpgradeType": 2,
+                        "Name": "proximitymines"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "munitionsfailsafe"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "gammasquadronveteran",
+                    "Type": "tiebomber",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "deadeye"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "extramunitions"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "plasmatorpedoes"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "clustermissiles"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "homingmissiles"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "munitionsfailsafe"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "backdraft",
+                    "Type": "tiesffighter",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "outmaneuver"
+                    },
+                    {
+                        "UpgradeType": 10,
+                        "Name": "firecontrolsystem"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "twinionenginemkii"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "specialopstraining"
+                    },
+                    {
+                        "UpgradeType": 11,
+                        "Name": "weaponsguidance"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "quickdraw",
+                    "Type": "tiesffighter",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "marksmanship"
+                    },
+                    {
+                        "UpgradeType": 10,
+                        "Name": "firecontrolsystem"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "twinionenginemkii"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "specialopstraining"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "theinquisitor",
+                    "Type": "tieadvancedprototype",
+                    "PointCost": 34
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "protonrockets"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "autothrusters"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "tiev1"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "tychocelchu",
+                    "Type": "awing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "rage"
+                    },
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 7,
+                        "Name": "protonrockets"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "autothrusters"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "awingtestpilot"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "poedameron",
+                    "Type": "t70xwing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 1,
+                        "Name": "bb8"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "autothrusters"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "lukeskywalker",
+                    "Type": "xwing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "predator"
+                    },
+                    {
+                        "UpgradeType": 1,
+                        "Name": "r2d2"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "hortonsalm",
+                    "Type": "ywing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 13,
+                        "Name": "bombloadout"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "extramunitions"
+                    },
+                    {
+                        "UpgradeType": 14,
+                        "Name": "twinlaserturret"
+                    },
+                    {
+                        "UpgradeType": 2,
+                        "Name": "seismiccharges"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "btla4ywing"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "wardensquadronpilot",
+                    "Type": "kwing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 13,
+                        "Name": "extramunitions"
+                    },
+                    {
+                        "UpgradeType": 2,
+                        "Name": "proximitymines"
+                    },
+                    {
+                        "UpgradeType": 2,
+                        "Name": "clustermines"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "advancedslam"
+                    },
+                    {
+                        "UpgradeType": 4,
+                        "Name": "bombardier"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "norrawexley",
+                    "Type": "arc170",
+                    "PointCost": 34
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 4,
+                        "Name": "tailgunner"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "allianceoverhaul"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "kavil",
+                    "Type": "ywing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "predator"
+                    },
+                    {
+                        "UpgradeType": 14,
+                        "Name": "twinlaserturret"
+                    },
+                    {
+                        "UpgradeType": 9,
+                        "Name": "r4agromech"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "palobgodalhi",
+                    "Type": "hwk290",
+                    "PointCost": 30
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "predator"
+                    },
+                    {
+                        "UpgradeType": 14,
+                        "Name": "blasterturret"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "moldycrow"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "guri",
+                    "Type": "starviper",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "virago"
+                    },
+                    {
+                        "UpgradeType": 6,
+                        "Name": "blackmarketslicertools"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "drearenthal",
+                    "Type": "ywing",
+                    "PointCost": 35
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 13,
+                        "Name": "protontorpedoes"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "iontorpedoes"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "munitionsfailsafe"
+                    },
+                    {
+                        "UpgradeType": 9,
+                        "Name": "r4b11"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "syndicatethug",
+                    "Type": "ywing",
+                    "PointCost": 34
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 13,
+                        "Name": "bombloadout"
+                    },
+                    {
+                        "UpgradeType": 13,
+                        "Name": "protontorpedoes"
+                    },
+                    {
+                        "UpgradeType": 14,
+                        "Name": "ioncannonturret"
+                    },
+                    {
+                        "UpgradeType": 2,
+                        "Name": "proximitymines"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "hullupgrade"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "btla4ywing"
+                    },
+                    {
+                        "UpgradeType": 9,
+                        "Name": "unhingedastromech"
+                    }
+                ]
+            },
+            {
+                "ChosenShip": {
+                    "PilotName": "fennrau",
+                    "Type": "protectoratestarfighter",
+                    "PointCost": 34
+                },
+                "Upgrades": [
+                    {
+                        "UpgradeType": 5,
+                        "Name": "pushthelimit"
+                    },
+                    {
+                        "UpgradeType": 8,
+                        "Name": "autothrusters"
+                    },
+                    {
+                        "UpgradeType": 12,
+                        "Name": "concorddawnprotector"
+                    }
+                ]
+            }
+        ]
+    ],
     "MaxUpgradeId": 8,
     "MaxShipId": 3
 }

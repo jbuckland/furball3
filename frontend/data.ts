@@ -1,11 +1,11 @@
 import { Build, Ship, Upgrade, SlotType } from '../app/core/models.js';
 import { IMainData } from './main-presenter.js';
+import * as $ from 'jquery';
 
 export class Data implements IMainData {
-    public getBuilds_ViaApi(): Array<Build> {
-        var retVal = new Array<Build>();
-
-        return retVal;
+    public getBuilds_ViaApi(): JQueryXHR {
+        let promise = $.get("/api/build/all");
+        return promise;
     }
 
     public getBuilds(): Array<Build> {

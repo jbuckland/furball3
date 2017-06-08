@@ -3,10 +3,12 @@ import * as Core from "./models";
 export interface IDataAccess {
     AddShip(ship: Core.Ship);
     GetAllShips(): Core.Ship[];
-    
+
     AddUpgrade(upgrade: Core.Upgrade);
     GetAllUpgrades(): Core.Upgrade[];
     DeleteUpgrade(upgradeId: number): boolean;
+
+    GetAllBuilds(): Array<Core.Build>;
 }
 
 export interface IShipService {

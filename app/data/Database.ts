@@ -1,4 +1,4 @@
-import { Ship, Upgrade } from "../core/models";
+import { Ship, Upgrade, Build } from "../core/models";
 
 export class Database {
 
@@ -11,5 +11,7 @@ export class Database {
 
     public Upgrades: Array<Upgrade>;
     public MaxUpgradeId: number;
+
+    public Builds: Array<Build>;
 
 }
