@@ -1,104 +1,72 @@
-import * as $ from 'jquery';
+import { Build, Ship, Upgrade, SlotType } from '../app/core/models.js';
+import { IMainData } from './main-presenter.js';
 
-class Main {
+export class Data implements IMainData {
+    public getBuilds_ViaApi(): Array<Build> {
+        var retVal = new Array<Build>();
 
-    public init() {
-        for (var listIndex = 0; listIndex < this.buildLists.length; listIndex++) {
-            var list = this.buildLists[listIndex];
-            console.log(list.name)
+        return retVal;
+    }
 
-            //is this a single build with multiple ships in it?
-            //or multiple builds with a single ship each?
+    public getBuilds(): Array<Build> {
+        var retVal = new Array<Build>();
+        for (var b = 0; b < this.buildLists.length; b++) {
+            var buildList = this.buildLists[b];
 
-            if (list.description != null && list.description == "multiple") {
+            for (var p = 0; p < buildList['pilots'].length; p++) {
+                var rawBuild = buildList['pilots'][p];
 
-                var listRowTemplate = $("#template_list_row").children().clone();
+                var build = new Build();
 
-                for (var j = 0; j < list.pilots.length; j++) {
-                    var pilot = list.pilots[j];
-                    var pilotTemplate = $("#template_pilot").children().clone();
+                build.ChosenShip = new Ship();
+                build.ChosenShip.PilotName = rawBuild['name'];
+                build.ChosenShip.Type = rawBuild['ship'];
+                build.ChosenShip.PointCost = rawBuild['points']
 
-                    //add the pilot to the template
-                    this.addPilot(pilotTemplate, pilot.name);
-                    console.log("  " + pilot.ship + " - " + pilot.name);
-                    for (var upgradeKey in pilot.upgrades) {
-                        var upgrades = pilot.upgrades[upgradeKey];
-                        for (var k = 0; k < upgrades.length; k++) {
-                            //add the upgrade to the template
-                            this.addUpgrade(pilotTemplate, upgrades[k]);
-                            console.log("    " + upgradeKey + ": " + upgrades[k]);
-                        }
+                build.Upgrades = new Array<Upgrade>();
+                var rawAllUpgrades = rawBuild['upgrades'];
+
+
+                for (var upgradeType in rawAllUpgrades) {
+                    var rawUpgradesOfType = rawAllUpgrades[upgradeType];
+                    for (var u = 0; u < rawUpgradesOfType.length; u++) {
+                        var rawUpgradeName = rawUpgradesOfType[u];
+                        var upgrade = new Upgrade();
+                        upgrade.UpgradeType = this.convertUpgradeNameToSlotType(upgradeType);
+                        upgrade.Name = rawUpgradeName;
+                        build.Upgrades.push(upgrade);
                     }
-
-                    listRowTemplate.append(pilotTemplate);
                 }
 
-                $("body").append(listRowTemplate);
-            } else {
-                for (var j = 0; j < list.pilots.length; j++) {
-                    var listRowTemplate = $("#template_list_row").children().clone();
-
-                    var pilot = list.pilots[j];
-                    var pilotTemplate = $("#template_pilot").children().clone();
-
-                    //add the pilot to the template
-                    this.addPilot(pilotTemplate, pilot.name);
-                    console.log("  " + pilot.ship + " - " + pilot.name);
-                    for (var upgradeKey in pilot.upgrades) {
-                        var upgrades = pilot.upgrades[upgradeKey];
-                        for (var k = 0; k < upgrades.length; k++) {
-                            //add the upgrade to the template
-                            this.addUpgrade(pilotTemplate, upgrades[k]);
-                            console.log("    " + upgradeKey + ": " + upgrades[k]);
-                        }
-                    }
-
-                    listRowTemplate.append(pilotTemplate);
-                    $("body").append(listRowTemplate);
-                }
+                retVal.push(build);
             }
         }
+        return retVal;
     }
 
+    private convertUpgradeNameToSlotType(rawUpgradeType): SlotType {
+        var type: SlotType = null;
 
-    private addPilot(template, pilotName) {
-        var pilot;
-        if (this.imageExists(pilotName)) {
-            var fileName = this.getFileName(pilotName);
-            pilot = $("<img class='pilotCard' />");
-            pilot.prop("src", fileName);
-        } else {
-            pilot = $("<div class='pilotCard text' />");
-            pilot.text(pilotName);
+        var map = {
+            'ept': SlotType.ElitePilot,
+            'mod': SlotType.Modification,
+            'title': SlotType.Title,
+            'bomb': SlotType.Bomb,
+            'system': SlotType.System,
+            'tech': SlotType.Tech,
+            'missile': SlotType.Missile,
+            'amd': SlotType.Astromech,
+            'torpedo': SlotType.Torpedo,
+            'turret': SlotType.Turret,
+            'crew': SlotType.Crew,
+            'samd': SlotType.SalvagedAstromech,
+            'illicit': SlotType.Illicit
         }
-        template.find(".pilotCardContainer").append(pilot);
-    }
-    private addUpgrade(template, upgradeName) {
-        var upgrade;
-        if (this.imageExists(upgradeName)) {
-            var fileName = this.getFileName(upgradeName);
-            upgrade = $("<img class='upgradeCard' />");
-            upgrade.prop("src", fileName);
-        } else {
-            upgrade = $("<div class='upgradeCard text' />");
-            upgrade.text(upgradeName);
-        }
-        template.find(".upgradeContainer").append(upgrade);
+
+        return map[rawUpgradeType];
     }
 
-    private getFileName(indexName): string {
-        var fileName = this.nameToFileMap[indexName];
-        fileName = "./img/" + fileName;
-        return fileName
-    }
-
-
-    private imageExists(index): boolean {
-        return this.nameToFileMap[index] != null && this.nameToFileMap[index].length > 0;
-    }
-
-
-    private oldLists: any = [
+    public buildLists: any = [
         {
             "name": "furball - imperial",
             "faction": "imperial",
@@ -503,7 +471,7 @@ class Main {
     ]
 
 
-    private buildLists: any = [
+    public oldLists: any = [
         {
             "name": "to print",
             "faction": "rebel",
@@ -544,7 +512,7 @@ class Main {
     ]
 
 
-    private nameToFileMap: any = {
+    public nameToFileMap: any = {
         "accuracycorrector": "Accuracy-corrector.png",
         "advancedcloakingdevice": "Advanced-cloaking-device.png",
         "advancedslam": "advancedslam.png",
@@ -627,9 +595,3 @@ class Main {
         "concorddawnprotector": "Swx55-concord-dawn-protector.png"
     };
 }
-
-window.onload = () => {
-    var el = document.getElementById('content');
-    var main = new Main();
-    main.init();
-};

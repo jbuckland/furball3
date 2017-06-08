@@ -1,9 +1,8 @@
 <html>
 
 <head>
-    <script src="./jquery-3.0.0.min.js"></script>
-    <script src="./data.js"></script>
-    <script src="./main.js"></script>
+    <script src="./js/system.js"></script>
+
 
     <style>
         .template {
@@ -18,9 +17,7 @@
             border-bottom: 1px solid grey;
         }
 
-        .pilotContainer{
-
-        }
+        .pilotContainer {}
 
         .pilotCardContainer {
             width: 200px;
@@ -34,15 +31,14 @@
             height: 279px;
         }
 
-        .upgradeContainer {
-        }
+        .upgradeContainer {}
 
         .upgradeCard {
             display: inline-block;
             width: 129px;
             height: 200px;
             padding-right: 5px;
-            float:left;
+            float: left;
         }
 
         .text {
@@ -56,24 +52,28 @@
 
 
 <body>
-
-
-<div id='template_list_row' class="template">
-    <div class='listRow'></div>
-</div>
-<div id='template_pilot' class="template">
-    <div class="pilotContainer">
-        <div class='pilotCardContainer'></div>
-        <div class='upgradeContainer'></div>
+    <div id='template_list_row' class="template">
+        <div class='listRow'></div>
     </div>
-</div>
+    <div id='template_pilot' class="template">
+        <div class="pilotContainer">
+            <div class='pilotCardContainer'></div>
+            <div class='upgradeContainer'></div>
+        </div>
+    </div>
 
 
-<script>
-    //main();
+    <script>
+        SystemJS.config({
+            transpiler: 'typescript',
+            map: {
+                jquery: './modules/jquery/dist/jquery.js'
+            }
+        });
 
 
-</script>
+        SystemJS.import('./main-view.js');
+    </script>
 
 </body>
 

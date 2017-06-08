@@ -2,7 +2,6 @@ export class Record {
     Id: number;
 }
 export class Ship extends Record {
-    //public Id: number;
     public Type: string;
     public PilotName: string;
     public PilotAbility: string;
@@ -27,12 +26,21 @@ export class Upgrade extends Record {
 }
 
 export enum SlotType {
-    Missile = 1,
-    Torpedo = 2,
-    Astromech = 3,
-    System = 4,
-    Cannon = 5,
-    ElitePilot = 6
+    Astromech = 1,
+    Bomb = 2,
+    Cannon = 3,
+    Crew = 4,
+    ElitePilot = 5,
+    Illicit = 6,
+    Missile = 7,
+    Modification = 8,
+    SalvagedAstromech = 9,
+    System = 10,
+    Tech = 11,
+    Title = 12,
+    Torpedo = 13,
+    Turret = 14,
+
 }
 
 

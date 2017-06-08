@@ -18,6 +18,7 @@
     "jquery": "^3.2.1",
     "morgan": "~1.8.1",
     "pug": "^2.0.0-rc.2",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "systemjs": "^0.20.13"
   }
 }
