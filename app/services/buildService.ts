@@ -8,6 +8,14 @@ export class BuildService {
     }
 
     public GetBuilds(): Array<Build> {
-        return this.dataAccess.GetAllBuilds();
+        let builds = this.dataAccess.GetAllBuilds();
+        for (let build of builds) {
+            build.ChosenShip.ImagePath = this.dataAccess.GetImagePath(build.ChosenShip.PilotName);
+            for (let upgrade of build.Upgrades) {
+                upgrade.ImagePath = this.dataAccess.GetImagePath(upgrade.Name);
+            }
+        }
+
+        return builds;
     }
 }

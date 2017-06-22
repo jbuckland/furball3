@@ -7,6 +7,7 @@ export class Ship extends Record {
     public PilotAbility: string;
     public PointCost: number;
     public CardImageId: number;
+    public ImagePath: string;
     public UpgradeSlots: SlotType[];
 }
 
@@ -23,6 +24,7 @@ export class Upgrade extends Record {
     public UpgradeType: SlotType;
     public Description: string;
     public CardImageId: number;
+    public ImagePath:string;
 }
 
 export enum SlotType {

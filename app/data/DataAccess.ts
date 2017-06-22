@@ -84,14 +84,14 @@ export class DataAccess implements IDataAccess {
     //temp stuff from old data.js
     public GetAllBuilds(): Array<Build> {
         //return this.database.Builds;
-        return this.GetAllBuilds_old();
+        return this.GetAllBuildsFromArray(this.buildsToPrint);
     }
 
 
-    public GetAllBuilds_old(): Array<Build> {
+    public GetAllBuildsFromArray(buildArray): Array<Build> {
         var retVal = new Array<Build>();
-        for (var b = 0; b < this.buildLists.length; b++) {
-            var buildList = this.buildLists[b];
+        for (var b = 0; b < buildArray.length; b++) {
+            var buildList = buildArray[b];
 
             for (var p = 0; p < buildList['pilots'].length; p++) {
                 var rawBuild = buildList['pilots'][p];
@@ -124,6 +124,13 @@ export class DataAccess implements IDataAccess {
         return retVal;
     }
 
+    public GetImagePath(cardName: string): string {
+        let path = null;
+        if (this.nameToFileMap[cardName])
+            path = this.nameToFileMap[cardName];
+        return path;
+    }
+
     private convertUpgradeNameToSlotType(rawUpgradeType): SlotType {
         var type: SlotType = null;
 
@@ -146,7 +153,7 @@ export class DataAccess implements IDataAccess {
         return map[rawUpgradeType];
     }
 
-    public buildLists: any = [
+    private buildLists: any = [
         {
             "name": "furball - imperial",
             "faction": "imperial",
@@ -163,7 +170,7 @@ export class DataAccess implements IDataAccess {
                         "mod": [
                             "autothrusters",
                             "stealthdevice"
-                            
+
                         ],
                         "title": [
                             "royalguardtie"
@@ -239,28 +246,7 @@ export class DataAccess implements IDataAccess {
                     },
                     "points": 35
                 },
-                {
-                    "name": "backdraft",
-                    "ship": "tiesffighter",
-                    "upgrades": {
-                        "ept": [
-                            "outmaneuver"
-                        ],
-                        "system": [
-                            "firecontrolsystem"
-                        ],
-                        "mod": [
-                            "twinionenginemkii"
-                        ],
-                        "title": [
-                            "specialopstraining"
-                        ],
-                        "tech": [
-                            "weaponsguidance"
-                        ]
-                    },
-                    "points": 35
-                },
+
                 {
                     "name": "quickdraw",
                     "ship": "tiesffighter",
@@ -380,26 +366,7 @@ export class DataAccess implements IDataAccess {
                     },
                     "points": 35
                 },
-                {
-                    "name": "wardensquadronpilot",
-                    "ship": "kwing",
-                    "upgrades": {
-                        "torpedo": [
-                            "extramunitions"
-                        ],
-                        "bomb": [
-                            "proximitymines",
-                            "clustermines"
-                        ],
-                        "mod": [
-                            "advancedslam"
-                        ],
-                        "crew": [
-                            "bombardier"
-                        ]
-                    },
-                    "points": 35
-                },
+
                 {
                     "name": "norrawexley",
                     "ship": "arc170",
@@ -552,7 +519,7 @@ export class DataAccess implements IDataAccess {
     ]
 
 
-    public oldLists: any = [
+    private buildLists2: any = [
         {
             "name": "to print",
             "faction": "rebel",
@@ -560,40 +527,267 @@ export class DataAccess implements IDataAccess {
             "description": "",
             "pilots": [
                 {
-                    "name": "hortonsalm",
-                    "ship": "ywing",
+                    "name": "backdraft",
+                    "ship": "tiesffighter",
+                    "upgrades": {
+                        "ept": [
+                            "outmaneuver"
+                        ],
+                        "system": [
+                            "firecontrolsystem"
+                        ],
+                        "mod": [
+                            "twinionenginemkii"
+                        ],
+                        "title": [
+                            "specialopstraining"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
+                        ]
+                    },
+                    "points": 35
+                },
+
+                {
+                    "name": "maarekstele",
+                    "ship": "tiedefender",
+                    "upgrades": {
+                        "ept": [
+                            "juke"
+                        ],
+                        "title": [
+                            "tiex7"
+                        ]
+                    },
+                    "points": 35
+                },
+                {
+                    "name": "echo",
+                    "ship": "tiephantom",
+                    "upgrades": {
+                        "ept": [
+                            "veteraninstincts"
+                        ],
+                        "system": [
+                            "collisiondetector"
+                        ],
+                        "mod": [
+                            "advancedcloakingdevice"
+                        ]
+                    },
+                    "points": 35
+                },
+                {
+                    "name": "wardensquadronpilot",
+                    "ship": "kwing",
                     "upgrades": {
                         "torpedo": [
-                            "bombloadout"
-                        ],
-                        "turret": [
-                            "twinlaserturret"
+                            "extramunitions"
                         ],
                         "bomb": [
-                            "ionbombs"
+                            "proximitymines",
+                            "connernet"
+                        ],
+                        "mod": [
+                            "advancedslam"
+                        ],
+                        "crew": [
+                            "bombardier"
+                        ]
+                    },
+                    "points": 35
+                },
+                {
+                    "name": "snapwexley",
+                    "ship": "t70xwing",
+                    "upgrades": {
+                        "ept": [
+                            "pushthelimit"
+                        ],
+                        "amd": [
+                            "r2astromech"
+                        ],
+                        "mod": [
+                            "integratedastromech"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
+                        ]
+                    },
+                    "points": 34
+                },
+
+                {
+                    "name": "niennunb",
+                    "ship": "t70xwing",
+                    "upgrades": {
+                        "ept": [
+                            "snapshot"
                         ],
                         "amd": [
                             "r3a2"
                         ],
+                        "mod": [
+                            "autothrusters"
+                        ]
+                    },
+                    "points": 35
+                },
+                {
+                    "name": "snapwexley",
+                    "ship": "t70xwing",
+                    "upgrades": {
+                        "ept": [
+                            "veteraninstincts"
+                        ],
+                        "amd": [
+                            "r3a2"
+                        ],
+                        "mod": [
+                            "vectoredthrusters"
+                        ],
                         "title": [
-                            "btla4ywing"
+                            "blackone"
+                        ],
+                        "tech": [
+                            "primedthrusters"
+                        ]
+                    },
+                    "points": 35
+                },
+                {
+                    "name": "niennunb",
+                    "ship": "t70xwing",
+                    "upgrades": {
+                        "ept": [
+                            "stayontarget"
+                        ],
+                        "amd": [
+                            "targetingastromech"
+                        ],
+                        "mod": [
+                            "integratedastromech"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
+                        ]
+                    },
+                    "points": 35
+                },
+
+                {
+                    "name": "tychocelchu",
+                    "ship": "awing",
+                    "upgrades": {
+                        "ept": [
+                            "pushthelimit",
+                            "daredevil"
+                        ],
+                        "mod": [
+                            "vectoredthrusters"
+                        ],
+                        "title": [
+                            "awingtestpilot"
+                        ]
+                    },
+                    "points": 32
+                },
+
+
+                {
+                    "name": "constablezuvio",
+                    "ship": "quadjumper",
+                    "upgrades": {
+                        "ept": [
+                            "outmaneuver"
+                        ],
+                        "bomb": [
+                            "connernet"
+                        ],
+                        "mod": [
+                            "engineupgrade"
+                        ],
+                        "crew": [
+                            "ketsuonyo"
+                        ],
+                        "illicit": [
+                            "scavengercrane"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
+                        ]
+                    },
+                    "points": 35
+                }, {
+                    "name": "constablezuvio",
+                    "ship": "quadjumper",
+                    "upgrades": {
+                        "ept": [
+                            "pushthelimit"
+                        ],
+                        "bomb": [
+                            "connernet"
+                        ],
+                        "mod": [
+                            "spacetugtractorarray"
+                        ],
+                        "crew": [
+                            "dengar"
+                        ],
+                        "illicit": [
+                            "scavengercrane"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
                         ]
                     },
                     "points": 35
                 }
-            ],
-            "version": "0.2.2",
-            "vendor": {
-                "xwsbandroid": {
-                    "builder": "X-Wing Squdron Builder for Android",
-                    "builder_link": "https:\/\/play.google.com\/store\/apps\/details?id=es.eko.squadronbuilder"
+            ]
+        }
+    ]
+
+    private buildsToPrint: any = [
+        {
+            "name": "to print",
+            "faction": "rebel",
+            "points": 100,
+            "description": "",
+            "pilots": [
+                {
+                    "name": "constablezuvio",
+                    "ship": "quadjumper",
+                    "upgrades": {
+                        "ept": [
+                            "outmaneuver"
+                        ],
+                        "bomb": [
+                            "connernet"
+                        ],
+                        "mod": [
+                            "spacetugtractorarray"
+                        ],
+                        "crew": [
+                            "ketsuonyo"
+                        ],
+                        "illicit": [
+                            "scavengercrane"
+                        ],
+                        "tech": [
+                            "patternanalyzer"
+                        ]
+                    },
+                    "points": 33
                 }
-            }
+
+            ]
         }
     ]
 
 
-    public nameToFileMap: any = {
+
+    private nameToFileMap: any = {
         "accuracycorrector": "Accuracy-corrector.png",
         "advancedcloakingdevice": "Advanced-cloaking-device.png",
         "advancedslam": "advancedslam.png",
@@ -673,7 +867,32 @@ export class DataAccess implements IDataAccess {
         "ionbombs": "Ion-bombs-1-.png",
         "r3a2": "R3-a2.png",
         "fennrau": "FennRau.png",
-        "concorddawnprotector": "Swx55-concord-dawn-protector.png"
+        "concorddawnprotector": "Swx55-concord-dawn-protector.png",
+        "snapshot": "Swx57-snap-shot.png",
+        "maarekstele": "Swx52-maarek-stele.png",
+        "juke": "Juke.png",
+        "collisiondetector": "Swx54-collision-detector.png",
+        "snapwexley": "Swx57-snap-wexley.png",
+        "r2astromech": "R2_Astromech.jpg",
+        "patternanalyzer": "Swx57-pattern-analyzer.png",
+        "constablezuvio": "Swx61-constable-zuvio.png",
+        "connernet": "Connor-net-1-.png",
+        "engineupgrade": "Engine_Upgrade.png",
+        "ketsuonyo": "Swx56-ketsu-onyo-crew.png",
+        "scavengercrane": "Swx61-scavenger-crane.png",
+        "talonbanecobra": "Swx32_talonbane_cobra_card-1-.png",
+        "blackmarketslicertools": "Black-market-slicer-tools.jpg",
+        "spacetugtractorarray": "Swx61-spacetug-tractor-array.png",
+        "dengar": "Dengar-0.png",
+        "daredevil": "Daredevil.png",
+        "chardaanrefit": "Chardaan-refit.png",
+        "primedthrusters": "Swx57-primed-thrusters.png",
+        "blackone": "Swx57-black-one.png",
+        "niennunb": "Swx57-nien-nunb.png",
+        "stayontarget": "Stay-on-target.png",
+        "targetingastromech": "Targeting-astromech.png",
+        "elloasty": "Ello-asty.png"
+
     };
 
 

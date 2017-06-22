@@ -9,6 +9,7 @@ export interface IDataAccess {
     DeleteUpgrade(upgradeId: number): boolean;
 
     GetAllBuilds(): Array<Core.Build>;
+    GetImagePath(cardName: string): string
 }
 
 export interface IShipService {

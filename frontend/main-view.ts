@@ -1,12 +1,14 @@
 import * as $ from 'jquery';
 import { Data } from './data.js';
 import { IMainView, MainPresenter } from './main-presenter.js';
-import { Build } from '../app/core/models.js';
+import { Build, Upgrade,Ship } from '../app/core/models.js';
 
 class MainView implements IMainView {
 
     private data: Data;
     private presenter: MainPresenter;
+
+    private IMG_DIR: string = "./img/";
 
     constructor() {
         this.data = new Data();
@@ -25,8 +27,8 @@ class MainView implements IMainView {
 
         //this.addPilot(pilotTemplate, build.ChosenShip.PilotName);
         var pilot;
-        if (this.imageExists(build.ChosenShip.PilotName)) {
-            var fileName = this.getFileName(build.ChosenShip.PilotName);
+        if (build.ChosenShip.ImagePath != null) {
+            var fileName = this.IMG_DIR + build.ChosenShip.ImagePath
             pilot = $("<img class='pilotCard' />");
             pilot.prop("src", fileName);
         } else {
@@ -38,7 +40,7 @@ class MainView implements IMainView {
 
         if (build.Upgrades != null) {
             for (let upgrade of build.Upgrades) {
-                this.addUpgrade(pilotTemplate, upgrade.Name);
+                this.addUpgrade(pilotTemplate, upgrade);
             }
         }
 
@@ -48,43 +50,30 @@ class MainView implements IMainView {
 
     }
 
-    private addPilot(template, pilotName: string) {
-        var pilot;
-        if (this.imageExists(pilotName)) {
-            var fileName = this.getFileName(pilotName);
-            pilot = $("<img class='pilotCard' />");
-            pilot.prop("src", fileName);
+    private addPilot(template, ship: Ship) {
+        var pilotElement;
+        if (ship.ImagePath != null) {
+            var fileName = this.IMG_DIR + ship.ImagePath;
+            pilotElement = $("<img class='pilotCard' />");
+            pilotElement.prop("src", fileName);
         } else {
-            pilot = $("<div class='pilotCard text' />");
-            pilot.text(pilotName);
+            pilotElement = $("<div class='pilotCard text' />");
+            pilotElement.text(ship.PilotName);
         }
-        template.find(".pilotCardContainer").append(pilot);
+        template.find(".pilotCardContainer").append(pilotElement);
     }
-    private addUpgrade(template, upgradeName: string) {
-        var upgrade;
-        if (this.imageExists(upgradeName)) {
-            var fileName = this.getFileName(upgradeName);
-            upgrade = $("<img class='upgradeCard' />");
-            upgrade.prop("src", fileName);
+    private addUpgrade(template, upgrade: Upgrade) {
+        var upgradeElement;
+        if (upgrade.ImagePath != null) {
+            var fileName = this.IMG_DIR + upgrade.ImagePath;
+            upgradeElement = $("<img class='upgradeCard' />");
+            upgradeElement.prop("src", fileName);
         } else {
-            upgrade = $("<div class='upgradeCard text' />");
-            upgrade.text(upgradeName);
+            upgradeElement = $("<div class='upgradeCard text' />");
+            upgradeElement.text(upgrade.Name);
         }
-        template.find(".upgradeContainer").append(upgrade);
+        template.find(".upgradeContainer").append(upgradeElement);
     }
-
-    private getFileName(indexName): string {
-        var fileName = this.data.nameToFileMap[indexName];
-        fileName = "./img/" + fileName;
-        return fileName
-    }
-
-
-    private imageExists(index): boolean {
-        return this.data.nameToFileMap[index] != null && this.data.nameToFileMap[index].length > 0;
-    }
-
-
 
 }
 
