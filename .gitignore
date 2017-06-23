@@ -4,5 +4,6 @@ server.js
 app/**/*.js
 routes/*.js
 frontend/*.js
+
 */bin/
 */obj/

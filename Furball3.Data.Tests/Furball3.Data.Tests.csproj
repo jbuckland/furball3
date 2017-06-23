@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit">
+      <Version>3.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter">
+      <Version>3.8.0-alpha1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Furball3.Data\Furball3.Data.csproj">
+      <Project>{CD8BDBC1-7107-470F-BC9E-BF0D516BFCCE}</Project>
+      <Name>Furball3.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
