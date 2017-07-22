@@ -25,6 +25,11 @@ namespace Furball3.Data
             return ships;
         }
 
+        public List<Build> GetAllBuilds()
+        {
+            return database.Builds;
+        }
+
 
         private string GetImagePath(string cardName)
         {
@@ -35,9 +40,9 @@ namespace Furball3.Data
         {
             string filePath = null;
 
-            if (database.NameToFileMap.ContainsKey(cardName))
+            if (nameToFileMap.ContainsKey(cardName))
             {
-                filePath = database.NameToFileMap[cardName];
+                filePath = nameToFileMap[cardName];
                 if (filePath == string.Empty)
                     filePath = null;
             }
@@ -56,6 +61,15 @@ namespace Furball3.Data
 
             if (this.database.Upgrades == null)
                 this.database.Upgrades = new List<Upgrade>();
+
+            foreach (var build in database.Builds)
+            {
+                build.ChosenShip.ImagePath = MapNameToFile(build.ChosenShip.PilotName);
+                foreach (var upgrade in build.Upgrades)
+                {
+                    upgrade.ImagePath = MapNameToFile(upgrade.Name);
+                }
+            }
         }
 
         private void SaveDbToFile()
