@@ -7,8 +7,8 @@
       <Project>{36A361B3-F11A-4C7D-9C08-D2E6F741B009}</Project>
       <Name>Furball3.Core</Name>
     </ProjectReference>
-     <!-- <Content Include="database.json" CopyToOutputDirectory="Always" /> -->
-      <None Include="database.json" CopyToOutputDirectory="Always" />
+    <!-- <Content Include="database.json" CopyToOutputDirectory="Always" /> -->
+    <None Include="database.json" CopyToOutputDirectory="Always" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">

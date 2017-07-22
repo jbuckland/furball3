@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Furball3.Core;
 using Newtonsoft.Json;
 
@@ -7,7 +8,7 @@ namespace Furball3.Data
 {
     public class DataAccess : IDataAccess
     {
-        private const string DB_FILE_PATH = "./database.json";
+        private const string DB_FILE_PATH = "./bin/Debug/netcoreapp1.1/database.json";
 
         private FileDatabase database;
 
