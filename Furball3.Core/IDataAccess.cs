@@ -6,5 +6,6 @@ namespace Furball3.Core
     {
         List<Ship> GetAllShips();
         List<Build> GetAllBuilds();
+        List<Build> GetToPrint();
     }
 }

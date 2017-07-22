@@ -2,6 +2,7 @@
 {
     public enum SlotType
     {
+        Null = 0,
         Astromech = 1,
         Bomb = 2,
         Cannon = 3,
@@ -15,6 +16,7 @@
         Tech = 11,
         Title = 12,
         Torpedo = 13,
-        Turret = 14
+        Turret = 14,
+        
     }
 }

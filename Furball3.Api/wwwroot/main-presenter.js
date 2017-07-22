@@ -7,8 +7,8 @@ var MainPresenter = (function () {
     }
     MainPresenter.prototype.DisplayAllBuilds = function () {
         var _this = this;
-        //let builds = this.data.getBuilds();
-        var buildsPromise = this.data.getBuilds();
+        //let buildsPromise = this.data.getBuilds();
+        var buildsPromise = this.data.getBuildsToPrint();
         buildsPromise.then(function (builds, textStatus) {
             for (var _i = 0, builds_1 = builds; _i < builds_1.length; _i++) {
                 var build = builds_1[_i];

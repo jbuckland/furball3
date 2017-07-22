@@ -1,0 +1,203 @@
+{
+    "version": "0.3.0",
+    "name": "To Print: Furball 35 - Rebel",
+    "faction": "rebel",
+    "points": 419,
+    "pilots": [
+        {
+            "name": "snapwexley",
+            "ship": "t70xwing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "bb8"
+                ],
+                "tech": [
+                    "patternanalyzer"
+                ],
+                "ept": [
+                    "pushthelimit"
+                ],
+                "mod": [
+                    "integratedastromech"
+                ]
+            }
+        },
+        {
+            "name": "niennunb",
+            "ship": "t70xwing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "r3a2"
+                ],
+                "tech": [
+                    "patternanalyzer"
+                ],
+                "ept": [
+                    "snapshot"
+                ],
+                "mod": [
+                    "integratedastromech"
+                ]
+            }
+        },
+        {
+            "name": "poedameron",
+            "ship": "t70xwing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "r5p9"
+                ],
+                "ept": [
+                    "veteraninstincts"
+                ],
+                "mod": [
+                    "integratedastromech"
+                ]
+            }
+        },
+        {
+            "name": "redace",
+            "ship": "t70xwing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "r5p9"
+                ],
+                "tech": [
+                    "commrelay"
+                ],
+                "mod": [
+                    "integratedastromech"
+                ]
+            }
+        },
+        {
+            "name": "captainnym",
+            "ship": "scurrgh6bomber",
+            "points": 35,
+            "upgrades": {
+                "bomb": [
+                    "bombletgenerator"
+                ],
+                "crew": [
+                    "sabinewren"
+                ]
+            }
+        },
+        {
+            "name": "mirandadoni",
+            "ship": "kwing",
+            "points": 34,
+            "upgrades": {
+                "crew": [
+                    "sabinewren"
+                ],
+                "bomb": [
+                    "bombletgenerator"
+                ]
+            }
+        },
+        {
+            "name": "tennumb",
+            "ship": "bwing",
+            "points": 35,
+            "upgrades": {
+                "cannon": [
+                    "manglercannon"
+                ]
+            }
+        },
+        {
+            "name": "wullffwarro",
+            "ship": "auzituckgunship",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "pushthelimit"
+                ],
+                "crew": [
+                    "rey"
+                ]
+            }
+        },
+        {
+            "name": "lowhhrick",
+            "ship": "auzituckgunship",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "trickshot"
+                ],
+                "crew": [
+                    "janors",
+                    "jynerso"
+                ],
+                "mod": [
+                    "experimentalinterface"
+                ]
+            }
+        },
+        {
+            "name": "hortonsalm",
+            "ship": "ywing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "r2d6"
+                ],
+                "turret": [
+                    "twinlaserturret"
+                ],
+                "ept": [
+                    "marksmanship"
+                ]
+            }
+        },
+        {
+            "name": "norrawexley",
+            "ship": "arc170",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "bb8"
+                ],
+                "ept": [
+                    "pushthelimit"
+                ],
+                "crew": [
+                    "intelligenceagent"
+                ],
+                "title": [
+                    "allianceoverhaul"
+                ]
+            }
+        },
+        {
+            "name": "elloasty",
+            "ship": "t70xwing",
+            "points": 35,
+            "upgrades": {
+                "amd": [
+                    "bb8"
+                ],
+                "ept": [
+                    "pushthelimit"
+                ],
+                "mod": [
+                    "integratedastromech"
+                ]
+            }
+        }
+    ],
+    "vendor": {
+        "voidstate": {
+            "squadron_id": 735833,
+            "link": "http://xwing-builder.co.uk/view/735833/to-print-furball-35---rebel",
+            "builder": "Voidstate's Unofficial X-Wing Squadron Builder",
+            "builder_link": "http://xwing-builder.co.uk/build"
+        }
+    }
+}

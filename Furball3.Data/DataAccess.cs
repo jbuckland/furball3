@@ -8,7 +8,7 @@ namespace Furball3.Data
 {
     public class DataAccess : IDataAccess
     {
-        private const string DB_FILE_PATH = "./bin/Debug/netcoreapp1.1/database.json";
+        private const string DB_FILE_PATH = "../Furball3.Data/database.json";
 
         private FileDatabase database;
 
@@ -30,11 +30,60 @@ namespace Furball3.Data
             return database.Builds;
         }
 
-
-        private string GetImagePath(string cardName)
+        public List<Build> GetToPrint()
         {
-            return MapNameToFile(cardName);
+            var fileText = File.ReadAllText("../Furball3.Data/toPrint.json");
+            var printBuilds = ConvertFromXWS(fileText);
+            SetFilePaths(printBuilds);
+            return printBuilds;
+
         }
+
+        public List<Build> ConvertFromXWS(string xwsString)
+        {
+            var builds = new List<Build>();
+            var xwsList = JsonConvert.DeserializeObject<XWSList>(xwsString);
+
+            foreach (var xwsPilot in xwsList.pilots)
+            {
+                var build = new Build();
+                build.ChosenShip = new Ship();
+                build.ChosenShip.PilotName = xwsPilot.name;
+                build.Upgrades = new List<Upgrade>();
+                foreach (var key in xwsPilot.upgrades.Keys)
+                {
+                    foreach (var upgradeName in xwsPilot.upgrades[key])
+                    {
+                        build.Upgrades.Add(new Upgrade {Name = upgradeName, UpgradeType = ConvertToSlotType(key)});
+                    }
+                }
+                builds.Add(build);
+            }
+
+            return builds;
+        }
+
+        private SlotType ConvertToSlotType(string slotName)
+        {
+            var type = SlotType.Null;
+            if (slotName == "amd") type = SlotType.Astromech;
+            else if (slotName == "bomb") type = SlotType.Bomb;
+            else if (slotName == "cannon") type = SlotType.Cannon;
+            else if (slotName == "crew") type = SlotType.Crew;
+            else if (slotName == "ept") type = SlotType.ElitePilot;
+            else if (slotName == "illicit") type = SlotType.Illicit;
+            else if (slotName == "missile") type = SlotType.Missile;
+            else if (slotName == "mod") type = SlotType.Modification;
+            else if (slotName == "samd") type = SlotType.SalvagedAstromech;
+            else if (slotName == "system") type = SlotType.System;
+            else if (slotName == "tech") type = SlotType.Tech;
+            else if (slotName == "title") type = SlotType.Title;
+            else if (slotName == "torpedo") type = SlotType.Torpedo;
+            else if (slotName == "turret") type = SlotType.Turret;
+
+            return type;
+        }
+
 
         private string MapNameToFile(string cardName)
         {
@@ -62,7 +111,12 @@ namespace Furball3.Data
             if (this.database.Upgrades == null)
                 this.database.Upgrades = new List<Upgrade>();
 
-            foreach (var build in database.Builds)
+            SetFilePaths(database.Builds);
+        }
+
+        private void SetFilePaths(List<Build> builds)
+        {
+            foreach (var build in builds)
             {
                 build.ChosenShip.ImagePath = MapNameToFile(build.ChosenShip.PilotName);
                 foreach (var upgrade in build.Upgrades)

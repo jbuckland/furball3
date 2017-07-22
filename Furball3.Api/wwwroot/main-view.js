@@ -5,7 +5,7 @@ var data_js_1 = require("./data.js");
 var main_presenter_js_1 = require("./main-presenter.js");
 var MainView = (function () {
     function MainView() {
-        this.IMG_DIR = "../img/";
+        this.IMG_DIR = "./img/";
         this.data = new data_js_1.Data();
     }
     MainView.prototype.init = function () {

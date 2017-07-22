@@ -18,5 +18,11 @@ namespace Furball3.Core.Services
             var builds= this.dataAccess.GetAllBuilds();
             return builds;
         }
+
+        public List<Build> GetToPrint()
+        {
+            var builds= this.dataAccess.GetToPrint();
+            return builds;
+        }
     }
 }
