@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{509BA4C2-0D9A-405C-807E-1594180FB92E}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Furball3.Web2</RootNamespace>
+    <AssemblyName>Furball3.Web2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\core\interfaces.ts" />
+    <Content Include="app\core\models.ts" />
+    <Content Include="app\data\DataAccess.ts" />
+    <Content Include="app\data\database.json" />
+    <Content Include="app\data\Database.ts" />
+    <Content Include="app\services\buildService.ts" />
+    <Content Include="app\services\shipService.ts" />
+    <Content Include="app\services\upgradeService.ts" />
+    <Content Include="app_old.js" />
+    <Content Include="bin\www" />
+    <Content Include="frontend\data.js" />
+    <Content Include="frontend\data.ts" />
+    <Content Include="frontend\img\Accuracy-corrector.png" />
+    <Content Include="frontend\img\Advanced-cloaking-device.png" />
+    <Content Include="frontend\img\advancedsensors.png" />
+    <Content Include="frontend\img\advancedslam.png" />
+    <Content Include="frontend\img\assaultmissiles.png" />
+    <Content Include="frontend\img\autothrusters.png" />
+    <Content Include="frontend\img\awingtestpilot.png" />
+    <Content Include="frontend\img\bb8.png" />
+    <Content Include="frontend\img\Black-market-slicer-tools.jpg" />
+    <Content Include="frontend\img\blasterturret.png" />
+    <Content Include="frontend\img\bombardier.png" />
+    <Content Include="frontend\img\bombloadout.png" />
+    <Content Include="frontend\img\btla4ywing.png" />
+    <Content Include="frontend\img\Chardaan-refit.png" />
+    <Content Include="frontend\img\clustermines.png" />
+    <Content Include="frontend\img\clustermissiles.png" />
+    <Content Include="frontend\img\Connor-net-1-.png" />
+    <Content Include="frontend\img\countess-ryad.png" />
+    <Content Include="frontend\img\Daredevil.png" />
+    <Content Include="frontend\img\deadeye.png" />
+    <Content Include="frontend\img\deathfire.png" />
+    <Content Include="frontend\img\Dengar-0.png" />
+    <Content Include="frontend\img\Drea-renthal-1-.png" />
+    <Content Include="frontend\img\echo.png" />
+    <Content Include="frontend\img\Ello-asty.png" />
+    <Content Include="frontend\img\engineupgrade.png" />
+    <Content Include="frontend\img\Engine_Upgrade.png" />
+    <Content Include="frontend\img\extramunitions.png" />
+    <Content Include="frontend\img\FennRau.png" />
+    <Content Include="frontend\img\Fire-control-system.png" />
+    <Content Include="frontend\img\guri.png" />
+    <Content Include="frontend\img\Homing_Missiles.png" />
+    <Content Include="frontend\img\hortonsalm.png" />
+    <Content Include="frontend\img\Hull_Modification.png" />
+    <Content Include="frontend\img\Inquisitor.png" />
+    <Content Include="frontend\img\Integrated-astromech.png" />
+    <Content Include="frontend\img\Ion-bombs-1-.png" />
+    <Content Include="frontend\img\ioncannonturret.png" />
+    <Content Include="frontend\img\iontorpedoes.png" />
+    <Content Include="frontend\img\Juke.png" />
+    <Content Include="frontend\img\kavil.png" />
+    <Content Include="frontend\img\lukeskywalker.png" />
+    <Content Include="frontend\img\Marksmanship.png" />
+    <Content Include="frontend\img\missing.png" />
+    <Content Include="frontend\img\moldycrow.png" />
+    <Content Include="frontend\img\munitionsfailsafe.png" />
+    <Content Include="frontend\img\Night_Beast.png" />
+    <Content Include="frontend\img\Outmaneuver.png" />
+    <Content Include="frontend\img\Overhaul.png" />
+    <Content Include="frontend\img\palobgodalhi.png" />
+    <Content Include="frontend\img\plasmatorpedoes.png" />
+    <Content Include="frontend\img\poedameron.png" />
+    <Content Include="frontend\img\predator.png" />
+    <Content Include="frontend\img\Proton-rockets.png" />
+    <Content Include="frontend\img\Proton-torpedoes.png" />
+    <Content Include="frontend\img\proximitymines.png" />
+    <Content Include="frontend\img\pushthelimit.png" />
+    <Content Include="frontend\img\R2-d2.png" />
+    <Content Include="frontend\img\R2_Astromech.jpg" />
+    <Content Include="frontend\img\R3-a2.png" />
+    <Content Include="frontend\img\R4-b11-1-.png" />
+    <Content Include="frontend\img\r4agromech.png" />
+    <Content Include="frontend\img\Rage.png" />
+    <Content Include="frontend\img\reconspecialist.png" />
+    <Content Include="frontend\img\royalguardtie.png" />
+    <Content Include="frontend\img\seismiccharges.png" />
+    <Content Include="frontend\img\soontirfel.png" />
+    <Content Include="frontend\img\SpecOpsTraining.png" />
+    <Content Include="frontend\img\Stay-on-target.png" />
+    <Content Include="frontend\img\stealthdevice.png" />
+    <Content Include="frontend\img\Swx32_talonbane_cobra_card-1-.png" />
+    <Content Include="frontend\img\Swx40_tiev1title.png" />
+    <Content Include="frontend\img\Swx52-gamma-squad-vet.png" />
+    <Content Include="frontend\img\Swx52-maarek-stele.png" />
+    <Content Include="frontend\img\Swx52-tie-d.png" />
+    <Content Include="frontend\img\Swx52-tie-x7.png" />
+    <Content Include="frontend\img\Swx53-norra-wexley.png" />
+    <Content Include="frontend\img\Swx53-r3-astromech.png" />
+    <Content Include="frontend\img\Swx53-tail-gunner.png" />
+    <Content Include="frontend\img\Swx53-vectored-thrusters.png" />
+    <Content Include="frontend\img\Swx54-backdraft.png" />
+    <Content Include="frontend\img\Swx54-collision-detector.png" />
+    <Content Include="frontend\img\Swx54-quickdraw.png" />
+    <Content Include="frontend\img\Swx55-concord-dawn-protector.png" />
+    <Content Include="frontend\img\Swx56-ketsu-onyo-crew.png" />
+    <Content Include="frontend\img\Swx57-black-one.png" />
+    <Content Include="frontend\img\Swx57-nien-nunb.png" />
+    <Content Include="frontend\img\Swx57-pattern-analyzer.png" />
+    <Content Include="frontend\img\Swx57-primed-thrusters.png" />
+    <Content Include="frontend\img\Swx57-snap-shot.png" />
+    <Content Include="frontend\img\Swx57-snap-wexley.png" />
+    <Content Include="frontend\img\Swx61-constable-zuvio.png" />
+    <Content Include="frontend\img\Swx61-scavenger-crane.png" />
+    <Content Include="frontend\img\Swx61-spacetug-tractor-array.png" />
+    <Content Include="frontend\img\syndicatethug.png" />
+    <Content Include="frontend\img\Targeting-astromech.png" />
+    <Content Include="frontend\img\tied.png" />
+    <Content Include="frontend\img\tiex7.png" />
+    <Content Include="frontend\img\tractorbeam.png" />
+    <Content Include="frontend\img\Twin-ion-engine-mk2-1-.png" />
+    <Content Include="frontend\img\twinlaserturret.png" />
+    <Content Include="frontend\img\tychocelchu.png" />
+    <Content Include="frontend\img\Unhinged-astromech.png" />
+    <Content Include="frontend\img\veteraninstincts.png" />
+    <Content Include="frontend\img\wardensquadronpilot.png" />
+    <Content Include="frontend\img\Weapons-guidance.png" />
+    <Content Include="frontend\img\Wedge-antilles.png" />
+    <Content Include="frontend\img\Zeta-ace.png" />
+    <Content Include="frontend\index-orig.html" />
+    <Content Include="frontend\js\system.js" />
+    <Content Include="frontend\main-presenter.ts" />
+    <Content Include="frontend\main-view.ts" />
+    <Content Include="package.json" />
+    <Content Include="public\javascripts\jquery-3.0.0.min.js" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="routes\buildRoutes.ts" />
+    <Content Include="routes\indexRoutes.ts" />
+    <Content Include="routes\IRoutes.ts" />
+    <Content Include="routes\shipRoutes.ts" />
+    <Content Include="routes\upgradeRoutes.ts" />
+    <Content Include="routes\users_old.js" />
+    <Content Include="server.ts" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings\globals\node\index.d.ts" />
+    <Content Include="typings\globals\node\typings.json" />
+    <Content Include="typings\index.d.ts" />
+    <Content Include="views\addShip.pug" />
+    <Content Include="views\error.pug" />
+    <Content Include="views\foo.pug" />
+    <Content Include="views\index-test.pug" />
+    <Content Include="views\index.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\shipRow.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug" />
+    <Folder Include="obj\Debug" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
