@@ -37,6 +37,8 @@ namespace Furball3.Api
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseStaticFiles();
+            
             app.UseMvc();
         }
     }
