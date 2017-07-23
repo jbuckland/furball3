@@ -190,6 +190,224 @@
                     "integratedastromech"
                 ]
             }
+        },
+        {
+            "name": "quickdraw",
+            "ship": "tiesffighter",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "marksmanship"
+                ],
+                "system": [
+                    "electronicbaffle"
+                ],
+                "title": [
+                    "specialopstraining"
+                ],
+                "mod": [
+                    "lightweightframe"
+                ]
+            }
+        },
+        {
+            "name": "backdraft",
+            "ship": "tiesffighter",
+            "points": 34,
+            "upgrades": {
+                "ept": [
+                    "outmaneuver"
+                ],
+                "system": [
+                    "collisiondetector"
+                ],
+                "tech": [
+                    "patternanalyzer"
+                ],
+                "title": [
+                    "specialopstraining"
+                ],
+                "mod": [
+                    "lightweightframe"
+                ]
+            }
+        },
+        {
+            "name": "lieutenantkestal",
+            "ship": "tieggressor",
+            "points": 34,
+            "upgrades": {
+                "ept": [
+                    "expertise"
+                ],
+                "turret": [
+                    "twinlaserturret"
+                ],
+                "mod": [
+                    "lightweightframe"
+                ]
+            }
+        },
+        {
+            "name": "lieutenantkestal",
+            "ship": "tieggressor",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "expertise"
+                ],
+                "missile": [
+                    "unguidedrockets"
+                ],
+                "turret": [
+                    "ioncannonturret"
+                ],
+                "mod": [
+                    "lightweightframe"
+                ]
+            }
+        },
+        {
+            "name": "talonbanecobra",
+            "ship": "kihraxzfighter",
+            "points": 35,
+            "upgrades": {
+                "title": [
+                    "vaksai"
+                ],
+                "ept": [
+                    "pushthelimit"
+                ],
+                "illicit": [
+                    "blackmarketslicertools"
+                ],
+                "mod": [
+                    "vectoredthrusters",
+                    "engineupgrade",
+                    "autothrusters"
+                ]
+            }
+        },
+        {
+            "name": "fennrau",
+            "ship": "protectoratestarfighter",
+            "points": 34,
+            "upgrades": {
+                "ept": [
+                    "pushthelimit"
+                ],
+                "title": [
+                    "concorddawnprotector"
+                ],
+                "mod": [
+                    "autothrusters"
+                ]
+            }
+        },
+        {
+            "name": "palobgodalhi",
+            "ship": "hwk290",
+            "points": 34,
+            "upgrades": {
+                "ept": [
+                    "predator"
+                ],
+                "turret": [
+                    "blasterturret"
+                ],
+                "crew": [
+                    "reconspecialist"
+                ],
+                "illicit": [
+                    "blackmarketslicertools"
+                ],
+                "title": [
+                    "moldycrow"
+                ]
+            }
+        },
+        {
+            "name": "constablezuvio",
+            "ship": "quadjumper",
+            "points": 32,
+            "upgrades": {
+                "crew": [
+                    "cadbane"
+                ],
+                "tech": [
+                    "patternanalyzer"
+                ],
+                "illicit": [
+                    "blackmarketslicertools"
+                ],
+                "ept": [
+                    "pushthelimit"
+                ],
+                "mod": [
+                    "spacetugtractorarray"
+                ],
+                "bomb": [
+                    "bombletgenerator"
+                ]
+            }
+        },
+        {
+            "name": "lokrevenant",
+            "ship": "scurrgh6bomber",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "trickshot"
+                ],
+                "turret": [
+                    "autoblasterturret"
+                ],
+                "bomb": [
+                    "bombletgenerator"
+                ],
+                "title": [
+                    "havoc"
+                ],
+                "system": [
+                    "accuracycorrector"
+                ],
+                "samd": [
+                    "genius"
+                ]
+            }
+        },
+        {
+            "name": "solsixxa",
+            "ship": "scurrgh6bomber",
+            "points": 35,
+            "upgrades": {
+                "ept": [
+                    "intensity",
+                    "intensity-exhausted"
+                ],
+                "bomb": [
+                    "bombletgenerator"
+                ],
+                "crew": [
+                    "cadbane"
+                ]
+            }
+        },
+        {
+            "name": "kavil",
+            "ship": "ywing",
+            "points": 34,
+            "upgrades": {
+                "turret": [
+                    "blasterturret"
+                ],
+                "samd": [
+                    "r4agromech"
+                ],
+                "ept": [
+                    "expertise"
+                ]
+            }
         }
     ],
     "vendor": {
