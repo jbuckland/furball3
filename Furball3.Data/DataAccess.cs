@@ -36,7 +36,6 @@ namespace Furball3.Data
             var printBuilds = ConvertFromXWS(fileText);
             SetFilePaths(printBuilds);
             return printBuilds;
-
         }
 
         public List<Build> ConvertFromXWS(string xwsString)
@@ -236,7 +235,39 @@ namespace Furball3.Data
             {"niennunb", "Swx57-nien-nunb.png"},
             {"stayontarget", "Stay-on-target.png"},
             {"targetingastromech", "Targeting-astromech.png"},
-            {"elloasty", "Ello-asty.png"}
+            {"elloasty", "Ello-asty.png"},
+            {"r5p9", "-R5-P9.png"},
+            {"redace", "Red-ace.png"},
+            {"commrelay", "Comm-relay.png"},
+            {"captainnym", "Swx65-captain-nym-rebel.png"},
+            {"bombletgenerator", "Swx65-bomblet-generator.png"},
+            {"sabinewren", "Sabine-wren-crew.png"},
+            {"mirandadoni", "Miranda-doni-1-.png"},
+            {"tennumb", "Ten-numb.png"},
+            {"manglercannon", "Mangler_cannon.png"},
+            {"wullffwarro", "Swx64-wullffwarro.png"},
+            {"rey", "Swx57-rey-crew.png"},
+            {"lowhhrick", "Swx64-lowhhrick.png"},
+            {"trickshot", "Trick-shot.jpg"},
+            {"janors", "Jan_Ors.png"},
+            {"jynerso", "Swx62-jyn-erso-crew.png"},
+            {"experimentalinterface", "Experimental-interface.png"},
+            {"r2d6", "R2-d6.png"},
+            {"intelligenceagent", "Intelligence-agent.png"},
+            {"electronicbaffle", "Swx41_electronic-baffle.png"},
+            {"lightweightframe", "Swx63-lightweight-frame.png"},
+            {"lieutenantkestal", "Swx66-lieutenant-kestal.png"},
+            {"expertise", "Fantasy-Flight-Games_X-Wing-Wave-10-Release-4.png"},
+            {"unguidedrockets", "Swx66-unguided-rockets.png"},
+            {"vaksai", "Vaksai.png"},
+            {"cadbane", "Swx65-cad-bane.png"},
+            {"lokrevenant", "Swx65-lokrevenant.png"},
+            {"autoblasterturret", "Autoblaster-turret-1-.png"},
+            {"havoc", "Swx65-havoc.png"},
+            {"genius", "Genius.png"},
+            {"solsixxa", "Swx65-sol-sixxa.png"},
+            {"intensity", "Swx66-intensity.png"},
+            {"intensity-exhausted","Swx66-intensity-exhausted.png"}
         };
     }
 }
